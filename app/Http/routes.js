@@ -20,7 +20,7 @@ const Route = use('Route')
 Route.on('/').render('welcome')
 
 // Todos
-Route.get('/todos', 'TodoController.index')
+Route.get('/todos', 'TodoController.index').middleware('auth')
 Route.get('/todos/:id', 'TodoController.show')
 Route.post('/todos', 'TodoController.store')
 Route.put('/todos/:id', 'TodoController.update')
@@ -29,4 +29,4 @@ Route.delete('/todos/:id', 'TodoController.destroy')
 // Users
 Route.get('/profile', 'UserController.profile')
 Route.post('/login', 'UserController.login')
-Route.post('/register', 'UserController.register')
+Route.post('/register', 'UserController.store')
