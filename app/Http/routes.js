@@ -25,3 +25,8 @@ Route.get('/todos/:id', 'TodoController.show')
 Route.post('/todos', 'TodoController.store')
 Route.put('/todos/:id', 'TodoController.update')
 Route.delete('/todos/:id', 'TodoController.destroy')
+
+// Users
+Route.get('/profile', 'UserController.profile')
+Route.post('/login', 'UserController.login')
+Route.post('/register', 'UserController.register')
